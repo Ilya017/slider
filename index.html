@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <style>
+      #wrap {
+        height: 250px;
+        overflow: hidden;
+        width: 250px;
+      }
+      .slider {
+        position: relative;
+        left: 0;
+        top:0;
+        height: 250px;
+        transition: all 0.5s;
+      }
+
+      .size {
+        height: 0;
+      }
+      .go1 {
+        top: 250px;
+      }
+      .go2 {
+        transform: rotateY(720deg) rotateX(90deg);
+      }
+      .go {
+        left: 250px;
+      }
+    </style>
+  </head>
+  <body>
+    <div id="wrap">
+      <img src="./images/wizard.png" alt="" id="slider" class="slider" />
+    </div>
+    <button onclick="previous()">&lt;</button>
+    <button onclick="next()">&gt;</button>
+    <button onclick="start()">start</button>
+    <button onclick="stop()">stop</button>
+    <br/>
+    <p>Эффекты</p>
+    <input type="checkbox" name="go" id="go" onclick="effect = 'go'">Сдвиг вправо
+    <input type="checkbox" name="size" id="size" onclick="effect = 'size'">Уменьшение
+    <input type="checkbox" name="go1" id="go1" onclick="effect = 'go1'">Сдвиг вниз
+    <input type="checkbox" name="go2" id="go2" onclick="effect = 'go2'">Искажение
+    <script src="./script.js"></script>
+  </body>
+</html>
